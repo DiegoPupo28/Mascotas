@@ -1,0 +1,66 @@
+﻿@model Mascotas.Models.Mascota
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Editar Mascota</h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                <input type="hidden" asp-for="Id" />
+
+                <div class="mb-3">
+                    <label asp-for="nombre" class="form-label"></label>
+                    <input asp-for="nombre" class="form-control" />
+                    <span asp-validation-for="nombre" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="edad" class="form-label"></label>
+                    <input asp-for="edad" class="form-control" />
+                    <span asp-validation-for="edad" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="sexo" class="form-label"></label>
+                    <input asp-for="sexo" class="form-control" />
+                    <span asp-validation-for="sexo" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="tamanio" class="form-label"></label>
+                    <input asp-for="tamanio" class="form-control" />
+                    <span asp-validation-for="tamanio" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="raza" class="form-label"></label>
+                    <input asp-for="raza" class="form-control" />
+                    <span asp-validation-for="raza" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="tipo" class="form-label"></label>
+                    <input asp-for="tipo" class="form-control" />
+                    <span asp-validation-for="tipo" class="text-danger"></span>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-success me-2">Guardar</button>
+                    <a asp-action="Listar" class="btn btn-secondary">Volver</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

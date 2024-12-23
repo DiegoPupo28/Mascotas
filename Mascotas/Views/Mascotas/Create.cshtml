@@ -1,0 +1,64 @@
+﻿@model Mascotas.Models.Mascota
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Crear Mascota</h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                <div class="form-group mb-3">
+                    <label asp-for="nombre" class="form-label fw-bold">Nombre</label>
+                    <input asp-for="nombre" class="form-control" placeholder="Ingresa el nombre de la mascota" />
+                    <span asp-validation-for="nombre" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="edad" class="form-label fw-bold">Edad</label>
+                    <input asp-for="edad" class="form-control" placeholder="Ingresa la edad de la mascota" />
+                    <span asp-validation-for="edad" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="sexo" class="form-label fw-bold">Sexo</label>
+                    <select asp-for="sexo" class="form-select">
+                        <option value="">Selecciona el sexo</option>
+                        <option value="Macho">Macho</option>
+                        <option value="Hembra">Hembra</option>
+                    </select>
+                    <span asp-validation-for="sexo" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="tamanio" class="form-label fw-bold">Tamaño</label>
+                    <input asp-for="tamanio" class="form-control" placeholder="Ejemplo: 1, 2, 3" />
+                    <span asp-validation-for="tamanio" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="raza" class="form-label fw-bold">Raza</label>
+                    <input asp-for="raza" class="form-control" placeholder="Ingresa la raza de la mascota" />
+                    <span asp-validation-for="raza" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="tipo" class="form-label fw-bold">Tipo</label>
+                    <input asp-for="tipo" class="form-control" placeholder="Ejemplo: Perro, Gato" />
+                    <span asp-validation-for="tipo" class="text-danger"></span>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary">Crear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <a asp-action="Listar">Volver</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

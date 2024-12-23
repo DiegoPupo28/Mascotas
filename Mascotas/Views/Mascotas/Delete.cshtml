@@ -1,0 +1,41 @@
+﻿@model Mascotas.Models.Mascota
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-danger text-white">
+            <h4 class="mb-0">Eliminar Mascota</h4>
+        </div>
+        <div class="card-body">
+            <h5 class="text-center text-danger mb-4">¿Estás seguro que deseas eliminar esta mascota?</h5>
+            <dl class="row">
+                <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(model => model.nombre)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.nombre)</dd>
+
+                <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(model => model.edad)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.edad)</dd>
+
+                <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(model => model.sexo)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.sexo)</dd>
+
+                <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(model => model.tamanio)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.tamanio)</dd>
+
+                <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(model => model.raza)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.raza)</dd>
+
+                <dt class="col-sm-3 fw-bold">@Html.DisplayNameFor(model => model.tipo)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.tipo)</dd>
+            </dl>
+
+            <form asp-action="Delete" class="text-center">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-danger me-2">Eliminar</button>
+                <a asp-action="Listar" class="btn btn-secondary">Volver</a>
+            </form>
+        </div>
+    </div>
+</div>

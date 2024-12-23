@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Mascotas.Models.Mascota>
+@{
+    ViewData["Title"] = "Listado";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Listado de Mascotas</h1>
+
+    <table class="table table-bordered table-hover table-striped text-center">
+        <thead class="thead-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Sexo</th>
+                <th>Tamaño</th>
+                <th>Raza</th>
+                <th>Tipo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.nombre)</td>
+                    <td>@Html.DisplayFor(modelItem => item.edad)</td>
+                    <td>@Html.DisplayFor(modelItem => item.sexo)</td>
+                    <td>@Html.DisplayFor(modelItem => item.tamanio)</td>
+                    <td>@Html.DisplayFor(modelItem => item.raza)</td>
+                    <td>@Html.DisplayFor(modelItem => item.tipo)</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <a class="btn btn-success btn-sm" asp-action="Edit" asp-route-id="@item.Id">
+                                <i class="fas fa-edit"></i> Editar
+                            </a>
+                            <a class="btn btn-warning btn-sm" asp-action="Details" asp-route-id="@item.Id">
+                                <i class="fas fa-info-circle"></i> Detalles
+                            </a>
+                            <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id">
+                                <i class="fas fa-trash-alt"></i> Eliminar
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

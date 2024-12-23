@@ -1,0 +1,50 @@
+﻿@model Mascotas.Models.Mascota
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded">
+        <div class="card-header bg-black text-white text-center py-3">
+            <h3 class="mb-0">Detalles de la Mascota</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="fw-bold">@Html.DisplayNameFor(model => model.nombre)</label>
+                    <div class="border rounded p-2">@Html.DisplayFor(model => model.nombre)</div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="fw-bold">@Html.DisplayNameFor(model => model.edad)</label>
+                    <div class="border rounded p-2">@Html.DisplayFor(model => model.edad)</div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="fw-bold">@Html.DisplayNameFor(model => model.sexo)</label>
+                    <div class="border rounded p-2">@Html.DisplayFor(model => model.sexo)</div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="fw-bold">@Html.DisplayNameFor(model => model.tamanio)</label>
+                    <div class="border rounded p-2">@Html.DisplayFor(model => model.tamanio)</div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="fw-bold">@Html.DisplayNameFor(model => model.raza)</label>
+                    <div class="border rounded p-2">@Html.DisplayFor(model => model.raza)</div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="fw-bold">@Html.DisplayNameFor(model => model.tipo)</label>
+                    <div class="border rounded p-2">@Html.DisplayFor(model => model.tipo)</div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer bg-light d-flex justify-content-between py-3">
+            <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning btn-lg">Editar</a>
+            <a asp-action="Listar" class="btn btn-secondary btn-lg">Volver</a>
+        </div>
+    </div>
+</div>

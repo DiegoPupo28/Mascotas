@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="/css/Index.css">
+</head>
+<body>
+    <div id="carouselExampleControls" class="carousel slide carousel-dark" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/banner1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/banner2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/banner3.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+	<section class="py-5">
+		<div class="container">
+			<h2 class="text-center mb-5">LAS MASCOTAS MÁS SOLICITADAS</h2>
+			<div class="row g-4">
+				<!-- Mascota 1 -->
+				<div class="col-md-6 col-lg-3">
+					<div class="card h-100">
+						<img src="~/imagen/mascota1.png" class="card-img-top" alt="Bulldog Frances">
+						<div class="card-body">
+							<h5 class="card-title">BULLDOG FRANCES</h5>
+							<p class="card-text">Gizmo - 2 años</p>
+							<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">
+								VER MÁS...
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Mascota 2 -->
+				<div class="col-md-6 col-lg-3">
+					<div class="card h-100">
+						<img src="~/imagen/mascota2.png" class="card-img-top" alt="Bull Terrier">
+						<div class="card-body">
+							<h5 class="card-title">BULL TERRIER</h5>
+							<p class="card-text">Coco - 7 meses</p>
+							<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">
+								VER MÁS...
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Mascota 3 -->
+				<div class="col-md-6 col-lg-3">
+					<div class="card h-100">
+						<img src="~/imagen/mascota3.png" class="card-img-top" alt="Boyero de Berna">
+						<div class="card-body">
+							<h5 class="card-title">BOYERO DE BERNA</h5>
+							<p class="card-text">Daisy - 1 año</p>
+							<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">
+								VER MÁS...
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Mascota 4 -->
+				<div class="col-md-6 col-lg-3">
+					<div class="card h-100">
+						<img src="~/imagen/mascota4.png" class="card-img-top" alt="Boxer">
+						<div class="card-body">
+							<h5 class="card-title">BOXER</h5>
+							<p class="card-text">Barack - 2 meses</p>
+							<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal4">
+								VER MÁS...
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="modal fade" id="modal1" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">GIZMO, UNO DE LOS MAS SOLICITADOS</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body text-center">
+					<p>NOMBRE: Gizmo</p>
+					<p>EDAD: 2 años</p>
+					<p>SEXO: Macho</p>
+					<p>TAMAÑO: Pequeño</p>
+					<p>RAZA: BULLDOG FRANCES</p>
+					<p>TIPO: Perro</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modal2" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">COCO, EL MAS ENGREIDO</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body text-center">
+					<p>NOMBRE: Coco</p>
+					<p>EDAD: 7 meses</p>
+					<p>SEXO: Macho</p>
+					<p>TAMAÑO: Mediano</p>
+					<p>RAZA: BULL TERRIER</p>
+					<p>TIPO: Perro</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal 3 -->
+	<div class="modal fade" id="modal3" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">DAISY, LA DAMA</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body text-center">
+					<p>NOMBRE: Daisy</p>
+					<p>EDAD: 1 año</p>
+					<p>SEXO: Hembra</p>
+					<p>TAMAÑO: Pequeño</p>
+					<p>RAZA: BOYERO DE BERNA</p>
+					<p>TIPO: Perro</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal 4 -->
+	<div class="modal fade" id="modal4" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">BARAK, EL BEBE</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body text-center">
+					<p>NOMBRE: Barack</p>
+					<p>EDAD: 2 meses</p>
+					<p>SEXO: Macho</p>
+					<p>TAMAÑO: Pequeño</p>
+					<p>RAZA: BOXER</p>
+					<p>TIPO: Perro</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+</body>
+</html>
